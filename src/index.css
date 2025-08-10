@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --container-max-width: 1240px;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  width: 100%;
+}
+
+@media (max-width: 1290px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.rtl {
+  direction: rtl;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.KumbhSans {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.Plex-Sans {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+body {
+  text-align: right;
+  background-image: linear-gradient(90deg, #003381 0%, #0b3a7f 100%);
+}
+
+.link.active {
+  color: #eb5212;
+}
+
+.border-gradient {
+  border: 1px solid;
+  border-image-source: linear-gradient(90deg, #003381 0%, #0b3a7f 100%);
+  border-image-slice: 1;
+}
+
+.list-disc {
+  list-style: disc;
+  direction: rtl;
+}
