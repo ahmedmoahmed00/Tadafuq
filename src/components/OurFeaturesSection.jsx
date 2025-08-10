@@ -55,21 +55,23 @@ const contentBoxs = [
 
 function OurFeaturesSection() {
   return (
-    <div className="container mt-[114px] max-[992px]:mt-[70px]">
-      <header className="Plex-Sans flex flex-col gap-6 mb-[100px]">
-        <h2 className="font-[700] text-[40px] text-white text-center">
-          <span className=" text-[#EB5212]">تدفق</span> خيارك الأول
-        </h2>
-        <p className="font-[600] text-white text-[32px] text-center ">
-          منصة اعلانات رقمية تمكن الأعمال من الوصول إلى
-        </p>
-      </header>
+    <div>
+      <div className="container mt-[114px] max-[992px]:mt-[70px]">
+        <header className="Plex-Sans flex flex-col gap-6 mb-[100px]">
+          <h2 className="font-[700] text-[40px] text-white text-center">
+            <span className=" text-[#EB5212]">تدفق</span> خيارك الأول
+          </h2>
+          <p className="font-[600] text-white text-[32px] text-center ">
+            منصة اعلانات رقمية تمكن الأعمال من الوصول إلى
+          </p>
+        </header>
 
-      <section className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-7">
-        {contentBoxs.map((item) => (
-          <BoxFeares key={item.id} icon={item.icon} text={item.content} />
-        ))}
-      </section>
+        <section className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-7">
+          {contentBoxs.map((item) => (
+            <BoxFeares key={item.id} icon={item.icon} text={item.content} />
+          ))}
+        </section>
+      </div>
     </div>
   );
 }

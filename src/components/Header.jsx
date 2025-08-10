@@ -7,7 +7,7 @@ function Header() {
   // const lides = "";
 
   return (
-    <header className=" bg-[#0C171524] p-6 ">
+    <header className=" min-[992px]:backdrop-blur-xl  min-[992px]:fixed top-0 left-0 right-0 z-50 bg-[#0C171524] p-6 ">
       <div className="container relative flex justify-between items-center">
         <Menu />
         <Login className={"max-[992px]:hidden"} />

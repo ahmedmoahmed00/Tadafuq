@@ -9,7 +9,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-t-[#22467D] bg-[linear-gradient(137.34deg,rgba(7,4,43,0.16)_23.98%,rgba(112,113,122,0.16)_65.73%)]">
+    <footer className="border-t backdrop-blur-[30px] border-t-[#22467D] bg-[linear-gradient(137.34deg,rgba(7,4,43,0.16)_23.98%,rgba(112,113,122,0.16)_65.73%)]">
       <div className="container flex flex-col gap-6 pt-[100px] pb-[30px]">
         <div className="flex max-[500px]:text-center max-[450px]:gap-3 max-[992px]:mx-auto max-[992px]:grid max-[992px]:grid-cols-2 max-[992px]:gap-8 justify-between text-white text-right">
           <ContactInfo />
