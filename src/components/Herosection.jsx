@@ -9,7 +9,13 @@ function Herosection() {
     <div className="container max-[992px]:mt-[82px] mt-[87px] pt-[98px]     ">
       <div className="flex items-center justify-between max-[992px]:flex-col max-[992px]:gap-12">
         <div>
-          <img src={GroupHerosection} alt="Herosection" />
+          <img
+            src={GroupHerosection}
+            alt="Herosection"
+            width={1200}
+            height={600}
+            style={{ width: "100%", height: "auto", maxWidth: "1200px" }}
+          />
         </div>
         <div className="rtl">
           <div className="Plex-Sans max-w-[648px] flex flex-col gap-10 text-white">

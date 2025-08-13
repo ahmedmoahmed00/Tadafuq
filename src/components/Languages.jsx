@@ -1,6 +1,5 @@
 import { FiChevronDown } from "react-icons/fi";
 import SA from "../assets/backgrounds/Icons/SA.png";
-import USA from "../assets/backgrounds/Icons/USA.png";
 
 function Languages() {
   const navLinkStyles =
