@@ -2,9 +2,12 @@ import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import Login from "./Login";
 import HeaderNav from "./HeaderNav";
+import { useOutsideClick } from "../hooks/useOutsideClick";
 
 function Menu() {
   const [open, setOpen] = useState(false);
+
+  const ref = useOutsideClick(() => setOpen(false));
 
   return (
     <div className="min-[991px]:hidden">
@@ -17,13 +20,18 @@ function Menu() {
       </button>
 
       {open && (
-        <div className="absolute w-full bg-[#0C171524] p-5 z-50">
+        <div
+          ref={ref}
+          className="absolute left-0 top-[70px] rounded-2xl w-full backdrop-blur-[40px] bg-[linear-gradient(137.34deg,rgba(7,4,43,0.16)_23.98%,rgba(112,113,122,0.16)_65.73%)] p-5 z-50"
+        >
           <Login className={"flex justify-center mb-4"} />
-          <HeaderNav className={"flex-col-reverse max-[992px]:gap-3"} />
+          <HeaderNav className={"flex-col-reverse max-[992px]:gap-3 "} />
         </div>
       )}
     </div>
   );
 }
+
+// bg-[linear-gradient(137.34deg,rgba(7,4,43,0.16)_23.98%,rgba(112,113,122,0.16)_65.73%)]
 
 export default Menu;
