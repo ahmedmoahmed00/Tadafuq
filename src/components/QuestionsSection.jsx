@@ -1,8 +1,11 @@
 import BoxQuestions from "../ui/BoxQuestions";
 import QuestionOne from "../assets/backgrounds/QuestionsSection/QuestionOne.png";
 import QuestionTwo from "../assets/backgrounds/QuestionsSection/QuestionTwo.png";
+import { useNavigate } from "react-router-dom";
 
 function QuestionsSection() {
+  const navigate = useNavigate();
+
   return (
     <div className="container mb-[147px] max-[992px]:mb-[92px] mt-[150px] max-[992px]:mt-[55px] Plex-Sans ">
       <header className="flex flex-col gap-6 text-center text-white ">
@@ -23,6 +26,7 @@ function QuestionsSection() {
           description={
             "تدفق هي شبكة إعلانات رقمية تستهدف الإعلانات المناسبة للمحتوى، بحيث يسمح برنامج الناشر لأصحاب المواقع الإلكترونية.."
           }
+          onClick={() => navigate("/publishers", { replace: true })}
         />
         <BoxQuestions
           image={QuestionTwo}
@@ -31,6 +35,7 @@ function QuestionsSection() {
           description={
             "تدفق هي شبكة إعلانات رقمية تركز بالدرجة الأولى على منطقة الشرق الأوسط وشمال إفريقيا بقدرات فنية عالمية. مما يعني أنه بإمكان المعلن أن يضع بانرات.."
           }
+          onClick={() => navigate("/publishers", { replace: true })}
         />
       </div>
     </div>

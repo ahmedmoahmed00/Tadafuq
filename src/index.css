@@ -4,6 +4,19 @@
   --container-max-width: 1240px;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #ffffff80 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   max-width: var(--container-max-width);
   margin-inline: auto;
@@ -32,21 +45,22 @@
 .Plex-Sans {
   font-family: "IBM Plex Sans Arabic", sans-serif;
 }
-
-/* body {
-  text-align: right;
-  background-image: linear-gradient(90deg, #003381 0%, #0b3a7f 100%);
-
-  position: relative;
-} */
+.Inter {
+  font-family: "Inter", sans-serif;
+}
 
 body {
+  text-align: right;
   position: relative; /* ضروري عشان ::before يبقى نسبة ليه */
   margin: 0;
   min-height: 100vh;
   background: linear-gradient(90deg, #003381 0%, #0b3a7f 100%);
   overflow-x: hidden;
   z-index: 10;
+}
+
+input {
+  direction: rtl;
 }
 
 body::before {
@@ -91,4 +105,34 @@ body::before {
 .list-disc {
   list-style: disc;
   direction: rtl;
+}
+
+.checkbox-container input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+}
+
+.checkbox-container input:checked {
+  background-color: #eb5212;
+  border-color: #eb5212;
+}
+
+.checkbox-container input:checked::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 5px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
 }

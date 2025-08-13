@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-function BoxQuestions({ image, mainTitle, subTitle, description }) {
+function BoxQuestions({ image, mainTitle, subTitle, description, onClick }) {
   return (
     <div className="border backdrop-blur-[10px] overflow-hidden rounded-[24px] rounded-tl-[14px] rounded-tr-[14px] border-[#FFFFFF1A] bg-[linear-gradient(137.34deg,rgba(7,4,43,0.16)_23.98%,rgba(112,113,122,0.16)_65.73%)]">
       <div className=" relative overflow-hidden ">
@@ -15,7 +15,7 @@ function BoxQuestions({ image, mainTitle, subTitle, description }) {
         <p className="KumbhSans text-[17px] font-normal opacity-[90%] leading-[26px]">
           {description}
         </p>
-        <Button type={"Secondary"} statue={"Normal"}>
+        <Button type={"Secondary"} statue={"Normal"} onClick={onClick}>
           المزيد
         </Button>
       </div>
