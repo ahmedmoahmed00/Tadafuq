@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import Login from "./Login";
 import HeaderNav from "./HeaderNav";
@@ -7,12 +7,16 @@ import { useOutsideClick } from "../hooks/useOutsideClick";
 function Menu() {
   const [open, setOpen] = useState(false);
 
-  const ref = useOutsideClick(() => setOpen(false));
+  const buttonRef = useRef();
+  const ref = useOutsideClick(() => setOpen(false), [buttonRef]);
 
   return (
     <div className="min-[991px]:hidden">
       <button
-        onClick={() => setOpen(!open)}
+        ref={buttonRef}
+        onClick={() => {
+          setOpen((open) => !open);
+        }}
         aria-label="Toggle menu"
         className="text-3xl text-white p-2 focus:outline-none cursor-pointer"
       >
@@ -31,7 +35,5 @@ function Menu() {
     </div>
   );
 }
-
-// bg-[linear-gradient(137.34deg,rgba(7,4,43,0.16)_23.98%,rgba(112,113,122,0.16)_65.73%)]
 
 export default Menu;
