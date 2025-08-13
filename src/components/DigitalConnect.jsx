@@ -1,6 +1,6 @@
 import RowDigitalConnect from "../ui/RowDigitalConnect";
-import ImageDigitalConnectOne from "../assets/backgrounds/DigitalConnect/ImageDigitalConnectOne.png";
-import ImageDigitalConnectTwo from "../assets/backgrounds/DigitalConnect/ImageDigitalConnectTwo.png";
+import ImageDigitalConnectOne from "../assets/Images/DigitalConnect/ImageDigitalConnectOne.png";
+import ImageDigitalConnectTwo from "../assets/Images/DigitalConnect/ImageDigitalConnectTwo.png";
 
 const Items = [
   {

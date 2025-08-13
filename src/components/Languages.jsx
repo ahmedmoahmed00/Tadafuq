@@ -1,5 +1,5 @@
 import { FiChevronDown } from "react-icons/fi";
-import SA from "../assets/backgrounds/Icons/SA.png";
+import SA from "../assets/Images/Icons/SA.png";
 
 function Languages() {
   const navLinkStyles =

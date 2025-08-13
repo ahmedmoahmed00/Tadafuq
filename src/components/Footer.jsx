@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoFooter from "../assets/backgrounds/Icons/logoFooter.png";
+import logoFooter from "../assets/Images/Icons/logoFooter.png";
 import SocialIcons from "../ui/SocialIcons";
 import SiteMap from "../ui/SiteMap";
 import ImportantLinks from "../ui/ImportantLinks";

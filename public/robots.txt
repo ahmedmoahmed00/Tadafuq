@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://tadafuq-ly0767dwl-ahmedmohammeds-projects.vercel.app/sitemap.xml

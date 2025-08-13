@@ -1,12 +1,12 @@
 import BoxFeares from "../ui/BoxFeares";
-import iconOne from "../assets/backgrounds/Icons/iconOne.png";
-import iconTwo from "../assets/backgrounds/Icons/iconTwo.png";
-import iconThree from "../assets/backgrounds/Icons/iconThree.png";
-import iconFour from "../assets/backgrounds/Icons/iconFour.png";
-import iconFive from "../assets/backgrounds/Icons/iconFive.png";
-import iconSix from "../assets/backgrounds/Icons/iconSix.png";
-import iconSeven from "../assets/backgrounds/Icons/iconSeven.png";
-import iconEight from "../assets/backgrounds/Icons/iconEight.png";
+import iconOne from "../assets/Images/Icons/iconOne.png";
+import iconTwo from "../assets/Images/Icons/iconTwo.png";
+import iconThree from "../assets/Images/Icons/iconThree.png";
+import iconFour from "../assets/Images/Icons/iconFour.png";
+import iconFive from "../assets/Images/Icons/iconFive.png";
+import iconSix from "../assets/Images/Icons/iconSix.png";
+import iconSeven from "../assets/Images/Icons/iconSeven.png";
+import iconEight from "../assets/Images/Icons/iconEight.png";
 
 const contentBoxs = [
   {

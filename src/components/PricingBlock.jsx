@@ -1,5 +1,4 @@
 import { HiCheck } from "react-icons/hi2";
-import CheckIcon from "../assets/backgrounds/Icons/CheckIcon.svg";
 import Button from "../ui/Button";
 
 const rows = [

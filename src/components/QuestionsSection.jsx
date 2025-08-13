@@ -1,6 +1,6 @@
 import BoxQuestions from "../ui/BoxQuestions";
-import QuestionOne from "../assets/backgrounds/QuestionsSection/QuestionOne.png";
-import QuestionTwo from "../assets/backgrounds/QuestionsSection/QuestionTwo.png";
+import QuestionOne from "../assets/Images/QuestionsSection/QuestionOne.png";
+import QuestionTwo from "../assets/Images/QuestionsSection/QuestionTwo.png";
 import { useNavigate } from "react-router-dom";
 
 function QuestionsSection() {
