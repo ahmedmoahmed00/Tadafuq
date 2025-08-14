@@ -99,6 +99,7 @@ function CreateAccountForm() {
         />
         <InputPassword
           label={"تأكيد كلمة المرور"}
+          id={"confirmPassword"}
           value={formValues.confirmPassword}
           setValue={(val) => handleChange("confirmPassword", val)}
           errorValue={formErrors.confirmPassword}

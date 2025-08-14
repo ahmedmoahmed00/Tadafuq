@@ -1,8 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Button from "../ui/Button";
-import Modal from "../ui/Modal";
-import { useOutsideClick } from "../hooks/useOutsideClick";
-import LoginForm from "./LoginForm";
 import AuthModalManager from "./AuthModalManager";
 
 function Login({ className }) {

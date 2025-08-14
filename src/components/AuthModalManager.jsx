@@ -6,7 +6,6 @@ import CreateAccountForm from "./CreateAccountForm";
 
 function AuthModalManager({ type, closeModal }) {
   const [modalType, setModalType] = useState(type || null);
-
   const ref = useOutsideClick(() => setModalType(null));
 
   useEffect(() => {
@@ -21,10 +20,11 @@ function AuthModalManager({ type, closeModal }) {
     };
   }, [modalType]);
 
-  if (!modalType) {
-    closeModal();
-    return;
-  }
+  useEffect(() => {
+    if (!modalType) {
+      closeModal();
+    }
+  }, [modalType, closeModal]);
 
   return (
     <Modal ref={ref} onClose={() => setModalType(null)}>

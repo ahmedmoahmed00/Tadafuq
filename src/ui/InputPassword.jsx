@@ -1,20 +1,27 @@
 import { useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 
-function InputPassword({ label, value, setValue, errorValue, placeholder }) {
+function InputPassword({
+  label,
+  value,
+  setValue,
+  errorValue,
+  placeholder,
+  id = "password",
+}) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <>
       <div className="flex flex-col ">
-        <label htmlFor="password" className="text-white font-[500] ">
+        <label htmlFor={id} className="text-white font-[500] ">
           {label ? label : "كلمة المرور"}
         </label>
         <div className="p-4 mt-4 border flex flex-row-reverse items-center border-[#FFFFFF33] rounded-[70px] ">
           <input
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            id="password"
+            id={id}
             className="h-full w-full Plex-Sans focus:outline-0 font-[400]  text-[#FFFFFF80]"
             type={showPassword ? "text" : "password"}
             placeholder={placeholder ? placeholder : "اكتب كلمة المرور"}

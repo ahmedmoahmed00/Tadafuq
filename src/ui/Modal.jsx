@@ -1,9 +1,12 @@
 import { createPortal } from "react-dom";
 import { HiXMark } from "react-icons/hi2";
 
-function Modal({ children, onClose, ref, Close }) {
+function Modal({ children, ref, onClose, Close }) {
   return createPortal(
-    <div className="fixed inset-0 bg-[#000000B2] z-[1000] p-4 flex items-center justify-center">
+    <div
+      data-ignore-outsideclick
+      className="fixed inset-0 bg-[#000000B2] z-[1000] p-4 flex items-center justify-center"
+    >
       <div
         ref={ref}
         className="w-full max-h-[90vh] overflow-y-auto max-[676px]:rounded-[24px] max-[676px]:p-[16px] max-w-[700px] rounded-[48px] shadow-lg p-12 transition-all duration-500 bg-[linear-gradient(137.34deg,rgba(27,13,192,0.16)_23.98%,rgba(167,168,199,0.16)_65.73%)] border border-[#FFFFFF1A] backdrop-blur-[150px] relative"

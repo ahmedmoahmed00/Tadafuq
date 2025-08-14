@@ -7,8 +7,23 @@ import { useOutsideClick } from "../hooks/useOutsideClick";
 function Menu() {
   const [open, setOpen] = useState(false);
 
+  const ref = useRef();
   const buttonRef = useRef();
-  const ref = useOutsideClick(() => setOpen(false), [buttonRef]);
+
+  useEffect(() => {
+    function handleClick(e) {
+      if (ref.current && ref.current.contains(e.target)) return;
+
+      if (buttonRef.current && buttonRef.current.contains(e.target)) return;
+
+      if (e.target.closest("[data-ignore-outsideclick]")) return;
+
+      setOpen(false);
+    }
+
+    document.addEventListener("click", handleClick, true);
+    return () => document.removeEventListener("click", handleClick, true);
+  }, []);
 
   return (
     <div className="min-[991px]:hidden">
